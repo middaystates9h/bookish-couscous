@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body style="height:100vh;margin:0;" onmousemove="spark(event)"></body>
+<script>
+function spark(e) {
+  let s = document.createElement("div");
+  s.style = `position:absolute;left:${e.pageX}px;top:${e.pageY}px;
+             width:5px;height:5px;background:gold;border-radius:50%;`;
+  document.body.appendChild(s);
+  setTimeout(() => s.remove(), 500);
+}
+</script>
